@@ -4,6 +4,7 @@ const clearLastUsers = document.querySelector('#clear-last-users')
 const lastUsers = document.querySelector('#last-users')
 
 const github = new Github()
+const ui = new UI()
 
 eventListeners()
 
@@ -21,15 +22,16 @@ function getData(a) {
       .getGithubData(username)
       .then((response) => {
         if (response.user.message === 'Not Found') {
-          console.log('error')
+          ui.displayMessages('User with this name not found!', 'danger')
         } else {
-          console.log('response')
+          ui.showUserInfo(response.user)
+          ui.displayMessages('Successfully found!', 'success')
         }
       })
       .catch((err) => console.log(err))
   }
 
-  UI.clearInput(nameInput)
+  ui.clearInput(nameInput)
   a.preventDefault()
 }
 function clearAllSearched() {}
