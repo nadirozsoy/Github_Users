@@ -26,6 +26,7 @@ function getData(a) {
         } else {
           ui.showUserInfo(response.user)
           ui.displayMessages('Successfully found!', 'success')
+          ui.showUserRepo(response.repo)
         }
       })
       .catch((err) => console.log(err))
