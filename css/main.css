@@ -1,0 +1,26 @@
+* {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+body,
+#ll {
+    background-image: url("https://preview.redd.it/g38817mqb1361.png?width=640&crop=smart&auto=webp&s=9d8b4b8a44073c740b0c29a78aefa24cf552bc74");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.borderzero {
+    border: 0 none;
+}
+
+#bilgi {
+    font-weight: bold;
+    text-align: center;
+}
+
+#search {
+    width: 100%;
+}
