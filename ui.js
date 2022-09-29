@@ -86,4 +86,16 @@ class UI {
                 </div>`
     })
   }
+  addSearchedUsersToUI(username) {
+    let users = Storage.getSearchedUsersFromStorage()
+    if (users.indexOf(username) === -1) {
+      // <!-- <li class="list-group-item">asdfasf</li> -->
+      const li = document.createElement('li')
+      li.className = 'list-group-item'
+      li.textContent = `${username}`
+      this.lastUsers.appendChild(li)
+    }
+  }
+
+  clearAllSearchedUsersFromUI() {}
 }

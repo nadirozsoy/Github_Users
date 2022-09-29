@@ -24,9 +24,11 @@ function getData(a) {
         if (response.user.message === 'Not Found') {
           ui.displayMessages('User with this name not found!', 'danger')
         } else {
+          ui.addSearchedUsersToUI(username)
+          Storage.addSearchedUsersToStorage(username)
           ui.showUserInfo(response.user)
-          ui.displayMessages('Successfully found!', 'success')
           ui.showUserRepo(response.repo)
+          ui.displayMessages('Successfully found!', 'success')
         }
       })
       .catch((err) => console.log(err))
@@ -36,4 +38,10 @@ function getData(a) {
   a.preventDefault()
 }
 function clearAllSearched() {}
-function getAllSearched() {}
+function getAllSearched() {
+  let users = Storage.getSearchedUsersFromStorage()
+  users.forEach((user) => {
+    lastUsers.innerHTML += `
+    <li class="list-group-item">${user}</li>`
+  })
+}
