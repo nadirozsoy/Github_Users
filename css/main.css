@@ -11,12 +11,16 @@ body,
     border: 0 none;
 }
 
-#bilgi {
+#info {
     font-weight: bold;
     text-align: center;
 }
 
 #search {
+    width: 100%;
+}
+
+#clear-last-users {
     width: 100%;
 }
 

@@ -29,15 +29,15 @@ class UI {
             <hr>
             <li class="list-group">
                 <li class="list-group-item borderzero">
-                    <img src="images/company.png" width="30px"> <span id="company">${user.company}</span>
+                    <img src="../images/company.png" width="30px"> <span id="company">${user.company}</span>
                     
                 </li>
                 <li class="list-group-item borderzero">
-                    <img src="images/location.png" width="30px"> <span id = "location">${user.location}</a>
+                    <img src="../images/location.png" width="30px"> <span id = "location">${user.location}</a>
                     
                 </li>
                 <li class="list-group-item borderzero">
-                    <img src="images/mail.png" width="30px"> <span id="email">${user.email}</span>
+                    <img src="../images/mail.png" width="30px"> <span id="email">${user.email}</span>
                     
                 </li>
                 
@@ -97,5 +97,9 @@ class UI {
     }
   }
 
-  clearAllSearchedUsersFromUI() {}
+  clearAllSearchedUsersFromUI() {
+    while (this.lastUsers.firstElementChild !== null) {
+      this.lastUsers.firstElementChild.remove()
+    }
+  }
 }

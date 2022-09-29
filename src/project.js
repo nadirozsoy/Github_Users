@@ -37,7 +37,12 @@ function getData(a) {
   ui.clearInput(nameInput)
   a.preventDefault()
 }
-function clearAllSearched() {}
+function clearAllSearched() {
+  if (confirm('Clear All Searched?')) {
+    Storage.clearAllSearchedUsersFromStorage()
+    ui.clearAllSearchedUsersFromUI()
+  }
+}
 function getAllSearched() {
   let users = Storage.getSearchedUsersFromStorage()
   users.forEach((user) => {
