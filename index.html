@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Github API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <title>Github Users</title>
 </head>
 
 <body>
@@ -20,9 +24,10 @@
                 <hr>
                 <p id="info" class="lead">
                     Enter a username and access the user's repositories! </p>
+                <div class="search-x"></div>
+                <input type="text" name="githubname" id="githubname" class="form-control input"
+                    placeholder="Enter a github username...">
                 <form id="github-form">
-                    <input type="text" name="githubname" id="githubname" class="form-control"
-                        placeholder="Enter a github username...">
                     <br>
                     <button id="search" type="submit" class="btn btn-primary">Search</button>
                 </form>
@@ -73,11 +78,11 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script src="github.js"></script>
-    <script src="storage.js"></script>
-    <script src="ui.js"></script>
-
-    <script src="project.js"></script>
+    <script src="/app.js"></script>
+    <script src="/src/github.js"></script>
+    <script src="/src/storage.js"></script>
+    <script src="/src/ui.js"></script>
+    <script src="/src/project.js"></script>
 </body>
 
 </html>
